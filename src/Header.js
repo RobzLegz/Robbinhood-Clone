@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "./resources/robinhoodfeather.svg"
+import logo from "./resources/robinhoodfeather.svg";
 
 const Header = () => {
     return (
@@ -9,11 +9,11 @@ const Header = () => {
             </div>
             <div className="headerSearch">
                 <div className="searchContainer">
-                    
+
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Header
+export default Header;
