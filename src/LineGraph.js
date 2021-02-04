@@ -33,6 +33,15 @@ const LineGraph = () => {
                         }
                     ]
                 }} 
+                options={{
+                    scales: {
+                        yAxes: [{
+                            ticks:{
+                                display: false
+                            }
+                        }]
+                    }
+                }}
             />
         </div>
     );
