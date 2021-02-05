@@ -11,7 +11,11 @@ const LineGraph = () => {
     {
         x: 15,
         y: 10
-    }]
+    },
+    {
+        x: 12,
+        y: 4,
+    },];
 
     return (
         <div className="lineGraph">
