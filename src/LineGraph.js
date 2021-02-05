@@ -41,6 +41,10 @@ const LineGraph = () => {
                     legend:{
                         display: false,
                     },
+                    tooltips:{
+                        mode: "index",
+                        intersect: false,
+                    },
                     scales: {
                         yAxes: [{
                             ticks:{
