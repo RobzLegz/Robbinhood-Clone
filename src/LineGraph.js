@@ -16,10 +16,11 @@ const LineGraph = () => {
             value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 10);
             data.push({x: date, y: value});
         }
+        setGraphData(data);
     }
 
     useEffect(() => {
-
+        createMockData();
     }, [])
 
     const data = [{
@@ -42,15 +43,15 @@ const LineGraph = () => {
                     datasets: [
                         {
                             type: "line",
-                            data: data,
+                            data: graphData,
                             backgroundColor: "#000",
                             borderColor: "#5AC53B",
-                            borderWidth: 2,
+                            borderWidth: 1,
                             pointBackgroundColor: "rgba(0,0,0,0)",
                             pointBackgroundColor: "rgba(0,0,0,0)",
                             pointHoverBackgroundColor: "#5AC53B",
                             pointHoverBorderColor: "#000",
-                            pointHoverBorderWidth: 4,
+                            pointHoverBorderWidth: 1,
                             pointHoverRadius: "6",
                         }
                     ]
@@ -64,6 +65,16 @@ const LineGraph = () => {
                         intersect: false,
                     },
                     scales: {
+                        xAxes:[{
+                            type: "time",
+                            time: {
+                                format: "MM/DD/YY",
+                                tooltipFormat: "ll",
+                            },
+                            ticks: {
+                                display: false,
+                            },
+                        }],
                         yAxes: [{
                             ticks:{
                                 display: false
