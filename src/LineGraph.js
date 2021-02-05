@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./LineGraph.css";
 import {Line} from "react-chartjs-2";
 
 const LineGraph = () => {
+
+    const [graphData, setGraphData] = useState([]);
+
+    const createMockData = () => {
+        let data = [];
+        let value = 50;
+        for(var i = 0; i < 366; i++){
+            let date = new Date();
+            date.setHours(0,0,0,0);
+            date.setDate(i);
+            value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 10);
+            data.push({x: date, y: value});
+        }
+    }
+
+    useEffect(() => {
+
+    }, [])
 
     const data = [{
         x: 10,
