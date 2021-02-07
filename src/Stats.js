@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import "./Stats.css"
+import StatsRow from './StatsRow';
 
 const Stats = () => {
 
@@ -21,7 +22,6 @@ const Stats = () => {
         stocksList.map((stock) => {
             promises.push(
                 getStockData(stock).then((res) => {
-                    console.log(res);
                     tempStocksData.push({
                         name: stock,
                         ...res.data,
@@ -29,6 +29,10 @@ const Stats = () => {
                 })
             );
         });
+        Promise.all(promises).then(() => {
+            console.log(tempStocksData);
+            setStockData(tempStocksData);
+        })
     }, []);
 
     return (
@@ -48,7 +52,9 @@ const Stats = () => {
                     </div>
                     <div className="statsContent">
                         <div className="statsRows">
-
+                            {stockData.map((stock) => (
+                                <StatsRow key={stock.name} name={stock.name} openPrice={stock.o} price={stock.c} />
+                            ))}
                         </div>
                     </div>
                 </div>

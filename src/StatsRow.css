@@ -1,0 +1,34 @@
+.statsRow {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  padding: 0 24px;
+  cursor: pointer;
+}
+.statsRow:hover {
+  background-color: #31363a;
+}
+.rowIntro > h1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  text-align: left;
+}
+.rowIntro > p {
+  font-size: 12px;
+}
+.rowNumbers {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 500;
+}
+.rowPrice {
+  padding-bottom: 4px;
+}
+.rowPercentage {
+  color: #5ac53b;
+}
+.rowChart {
+  padding: 0 10px;
+}
