@@ -21,6 +21,7 @@ const Stats = () => {
         stocksList.map((stock) => {
             promises.push(
                 getStockData(stock).then((res) => {
+                    console.log(res);
                     tempStocksData.push({
                         name: stock,
                         ...res.data,
