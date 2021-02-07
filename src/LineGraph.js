@@ -57,6 +57,7 @@ const LineGraph = () => {
                     ]
                 }} 
                 options={{
+                    maintainAspectRatio: false,
                     legend:{
                         display: false,
                     },

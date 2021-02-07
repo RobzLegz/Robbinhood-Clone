@@ -1,6 +1,7 @@
 import React from 'react';
 import LineGraph from './LineGraph';
 import "./NewsFeed.css";
+import Stats from './Stats';
 
 const NewsFeed = () => {
     return (
@@ -13,6 +14,7 @@ const NewsFeed = () => {
                     </div>
                     <div className="newsfeedChart">
                         <LineGraph />
+                        <Stats />
                     </div>
                 </div>
             </div>
